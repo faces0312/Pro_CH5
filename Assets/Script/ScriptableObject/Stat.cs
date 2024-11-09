@@ -3,8 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-[CreateAssetMenu(fileName = "Stat", menuName = "New Stem")]
+public enum StatType
+{
+    Player,
+    SubFirend,
+    Enemy
+}
+
+[CreateAssetMenu(fileName = "Stat", menuName = "New Stat")]
 public class Stat : ScriptableObject
 {
+    public StatType type;
+
+    public float hp;
+    public float attack;
     
+    public float critical;
+    public int criticalChance;
+
+    public float attackSpeed;
 }
