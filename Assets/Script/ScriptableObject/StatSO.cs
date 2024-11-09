@@ -11,7 +11,7 @@ public enum StatType
 }
 
 [CreateAssetMenu(fileName = "Stat", menuName = "New Stat")]
-public class Stat : ScriptableObject
+public class StatSO : ScriptableObject
 {
     public StatType type;
 

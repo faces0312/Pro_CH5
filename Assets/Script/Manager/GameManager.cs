@@ -24,8 +24,12 @@ public class GameManager : MonoBehaviour
         set { _player = value; }
     }
 
+    public bool Is_Battle;//전투중인지
+
     void Awake()
     {
+        Is_Battle = false;
+
         Time.timeScale = 1;
         if (_instance == null)
         {

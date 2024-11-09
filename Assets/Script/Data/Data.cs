@@ -32,7 +32,7 @@ public class Data : MonoBehaviour
         }
     }
 
-    public string GameDataFileName = "OverHand.json";  //이름 변경 절대 X 
+    public string GameDataFileName = "ProCh5.json";  //이름 변경 절대 X 
 
 
 
