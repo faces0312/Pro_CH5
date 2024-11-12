@@ -6,8 +6,7 @@ using TMPro;
 
 public class MainCancas : MonoBehaviour
 {
-    public TextMeshProUGUI moneyText;
-    
+    public TextMeshProUGUI moneyText;    
     public DetailCanvas detailCanvas;
 
     private void Update()

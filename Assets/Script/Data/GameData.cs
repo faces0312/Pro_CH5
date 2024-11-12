@@ -8,9 +8,15 @@ public class GameData
 {
     public int stage;
     public int money;
-    //추가 능력치 관련
-    public float hpAdditional;
-    public float attackAdditional;
-    public float criticalAdditional;
-    public int criticalChanceAdditional;
+    //레벨 관련
+    public int touchLV;
+    public int hpLV;
+    public int attackLV;
+    public int criticalLV;
+    public int criticalChanceLV;
+    //전투 도우미 관련
+    public bool subfirend1On;
+    public bool subfirend2On;
+    public bool subfirend3On;
+    public bool subfirend4On;
 }

@@ -19,7 +19,7 @@ public class StatSO : ScriptableObject
     public float attack;
     
     public float critical;
-    public int criticalChance;
+    [Range(0, 100)] public int criticalChance;
 
     public float attackSpeed;
 }
