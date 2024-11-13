@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerConditions : MonoBehaviour
 {
     //플레이어 현재 스탯 값
     public StatSO statSO;
+    public float hpTmp;
+    public float attackTmp;
+
+    private void Start()
+    {
+        hpTmp = statSO.hp;
+        attackTmp = statSO.attack;
+    }
 
     public void UpdateStats()
     {
@@ -14,5 +24,10 @@ public class PlayerConditions : MonoBehaviour
         statSO.critical = Data.Instance.gameData.criticalLV * 20;
         statSO.criticalChance = Data.Instance.gameData.criticalChanceLV;
         Data.Instance.SaveGameData();
+    }
+
+    public void PlayerDamaged(float value)
+    {
+        hpTmp -= value;
     }
 }

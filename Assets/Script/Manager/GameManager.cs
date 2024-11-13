@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
         set { _player = value; }
     }
 
+    public BossManager bossManager;
     public bool Is_Battle;//전투중인지
 
     void Awake()

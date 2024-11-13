@@ -33,13 +33,13 @@ public class PlayerSubFirends : MonoBehaviour
         else
         {
             if (Data.Instance.gameData.subfirend1On == true)
-                Instantiate(subFirends1, new Vector3(-1, -4, 0), Quaternion.identity);
+                Instantiate(subFirends1, new Vector3(-1, -3.5f, 0), Quaternion.identity);
             if (Data.Instance.gameData.subfirend2On == true)
-                Instantiate(subFirends2, new Vector3(1, -4, 0), Quaternion.identity);
+                Instantiate(subFirends2, new Vector3(1, -3.5f, 0), Quaternion.identity);
             if (Data.Instance.gameData.subfirend3On == true)
-                Instantiate(subFirends3, new Vector3(-2, -4, 0), Quaternion.identity);
+                Instantiate(subFirends3, new Vector3(-2, -3.5f, 0), Quaternion.identity);
             if (Data.Instance.gameData.subfirend4On == true)
-                Instantiate(subFirends4, new Vector3(2, -4, 0), Quaternion.identity);
+                Instantiate(subFirends4, new Vector3(2, -3.5f, 0), Quaternion.identity);
         }
         
     }

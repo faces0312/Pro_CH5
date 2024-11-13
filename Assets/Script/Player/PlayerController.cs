@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
 
         if (context.phase == InputActionPhase.Started && GameManager.Instance.Is_Battle == true)
         {
+            GameManager.Instance.bossManager.BossDamaged(GameManager.Instance.Player.conditions.attackTmp);
             Debug.Log("데미지발동");
         }
     }

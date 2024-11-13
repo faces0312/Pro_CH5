@@ -15,7 +15,6 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
-        
         if (attackSpeed > 0)
         {
             attackSpeed -= Time.deltaTime;
@@ -23,6 +22,7 @@ public class Boss : MonoBehaviour
         else
         {
             Debug.Log("АјАн");
+            GameManager.Instance.Player.conditions.PlayerDamaged(statSO.attack);
             attackSpeed = statSO.attackSpeed;
         }
     }
