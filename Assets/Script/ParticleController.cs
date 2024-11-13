@@ -4,7 +4,32 @@ using UnityEngine;
 
 public class ParticleController : MonoBehaviour
 {
-    private void DestroyProjectile(Vector3 position, bool createFx)
+    [SerializeField] private ParticleSystem touchParticleMain;
+    [SerializeField] private ParticleSystem touchParticleBattle;
+
+    private void Start()
+    {
+        touchParticleMain.Stop(); 
+        touchParticleBattle.Stop();
+        ParticleSystem.EmissionModule emMain = touchParticleMain.emission;
+        ParticleSystem.EmissionModule emBattle = touchParticleBattle.emission;
+        emMain.SetBurst(0, new ParticleSystem.Burst(0, 5));
+        emBattle.SetBurst(0, new ParticleSystem.Burst(0, 5));
+    }
+    public void CreateMainParticle(Vector3 position)
+    {
+        touchParticleMain.transform.position = position;
+        touchParticleMain.Stop();
+        touchParticleMain.Play();
+    }
+
+    public void CreateBattleParticle(Vector3 position)
+    {
+        touchParticleBattle.transform.position = position;
+        touchParticleBattle.Stop();
+        touchParticleBattle.Play();
+    }
+    /*private void DestroyProjectile(Vector3 position, bool createFx)
     {
         if (createFx)
         {
@@ -18,5 +43,5 @@ public class ParticleController : MonoBehaviour
             particleSystem.Play();
         }
         gameObject.SetActive(false);
-    }
+    }*/
 }

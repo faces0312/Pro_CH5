@@ -27,8 +27,6 @@ public class GameManager : MonoBehaviour
     public BossManager bossManager;
     public bool Is_Battle;//전투중인지
 
-    public ParticleSystem EffectParticle;
-
     void Awake()
     {
         Time.timeScale = 1;
@@ -46,6 +44,5 @@ public class GameManager : MonoBehaviour
         }
 
         Is_Battle = false;
-        EffectParticle = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
     }
 }
