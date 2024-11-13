@@ -3673,6 +3673,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682315228}
   m_CullTransparentMesh: 1
+--- !u!198 &721447992 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7116274245319836258, guid: f2349070565740e4eaf9d5bd828a993a, type: 3}
+  m_PrefabInstance: {fileID: 1134687480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &723884661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4219,8 +4224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54381622604b184baa6ab8b40f66aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchParticleMain: {fileID: 0}
-  touchParticleBattle: {fileID: 0}
+  touchParticleMain: {fileID: 2054478385}
+  touchParticleBattle: {fileID: 721447992}
 --- !u!1 &787997454
 GameObject:
   m_ObjectHideFlags: 0
@@ -10530,6 +10535,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!198 &2054478385 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4800905710936303333, guid: b73b437f8ca5a2f4b88b9fa547ebfa70, type: 3}
+  m_PrefabInstance: {fileID: 569304370}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2063103212
 GameObject:
   m_ObjectHideFlags: 0

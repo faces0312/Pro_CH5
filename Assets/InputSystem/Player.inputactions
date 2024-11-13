@@ -7,12 +7,12 @@
             "actions": [
                 {
                     "name": "Click",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "514540c1-239c-4121-9411-58548cba186e",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Touch",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
