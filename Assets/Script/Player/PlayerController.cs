@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
         if(context.phase == InputActionPhase.Started && GameManager.Instance.Is_Battle == false)
         {
             Data.Instance.gameData.money += (Data.Instance.gameData.touchLV + 1);
+            //Effect
             Debug.Log("터치 발동");
         }
 

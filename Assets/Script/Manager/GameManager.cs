@@ -27,10 +27,10 @@ public class GameManager : MonoBehaviour
     public BossManager bossManager;
     public bool Is_Battle;//전투중인지
 
+    public ParticleSystem EffectParticle;
+
     void Awake()
     {
-        Is_Battle = false;
-
         Time.timeScale = 1;
         if (_instance == null)
         {
@@ -44,5 +44,8 @@ public class GameManager : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+
+        Is_Battle = false;
+        EffectParticle = GameObject.FindGameObjectWithTag("Particle").GetComponent<ParticleSystem>();
     }
 }
