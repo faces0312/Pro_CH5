@@ -6,15 +6,19 @@ public class ParticleController : MonoBehaviour
 {
     [SerializeField] private ParticleSystem touchParticleMain;
     [SerializeField] private ParticleSystem touchParticleBattle;
+    [SerializeField] private ParticleSystem touchParticleCritical;
 
     private void Start()
     {
         touchParticleMain.Stop(); 
         touchParticleBattle.Stop();
+        touchParticleCritical.Stop();
         ParticleSystem.EmissionModule emMain = touchParticleMain.emission;
         ParticleSystem.EmissionModule emBattle = touchParticleBattle.emission;
+        ParticleSystem.EmissionModule emCritical = touchParticleCritical.emission;
         emMain.SetBurst(0, new ParticleSystem.Burst(0, 5));
         emBattle.SetBurst(0, new ParticleSystem.Burst(0, 5));
+        emCritical.SetBurst(0, new ParticleSystem.Burst(0, 10));
     }
     public void CreateMainParticle(Vector3 position)
     {
@@ -28,6 +32,13 @@ public class ParticleController : MonoBehaviour
         touchParticleBattle.transform.position = position;
         touchParticleBattle.Stop();
         touchParticleBattle.Play();
+    }
+
+    public void CreateCriticalParticle(Vector3 position)
+    {
+        touchParticleCritical.transform.position = position;
+        touchParticleCritical.Stop();
+        touchParticleCritical.Play();
     }
     /*private void DestroyProjectile(Vector3 position, bool createFx)
     {
