@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
-        Data.Instance.gameData.money = 1000;
         /*Data.Instance.gameData.stage = 0;
         Data.Instance.gameData.money = 0;
         Data.Instance.gameData.touchLV = 0;
