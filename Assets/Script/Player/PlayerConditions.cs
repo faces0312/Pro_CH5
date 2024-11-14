@@ -10,11 +10,13 @@ public class PlayerConditions : MonoBehaviour
     public StatSO statSO;
     public float hpTmp;
     public float attackTmp;
+    public float criticalTmp;
 
     private void Start()
     {
         hpTmp = statSO.hp;
         attackTmp = statSO.attack;
+        criticalTmp = statSO.critical;
     }
 
     public void UpdateStats()
