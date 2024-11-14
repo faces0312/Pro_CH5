@@ -17,10 +17,11 @@ public class Player : MonoBehaviour
         subFirends = GetComponent<PlayerSubFirends>();
         particle = GetComponent<ParticleController>();
         conditions.UpdateStats();
+        Time.timeScale = 1;
     }
     private void Start()
     {
-        Data.Instance.gameData.stage = 0;
+        /*Data.Instance.gameData.stage = 0;
         Data.Instance.gameData.money = 0;
         Data.Instance.gameData.touchLV = 0;
         Data.Instance.gameData.hpLV = 0;
@@ -30,7 +31,6 @@ public class Player : MonoBehaviour
         Data.Instance.gameData.subfirend1On = false;
         Data.Instance.gameData.subfirend2On = false;
         Data.Instance.gameData.subfirend3On = false;
-        Data.Instance.gameData.subfirend4On = false;
-
+        Data.Instance.gameData.subfirend4On = false;*/
     }
 }
