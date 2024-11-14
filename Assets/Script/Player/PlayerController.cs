@@ -28,11 +28,31 @@ public class PlayerController : MonoBehaviour
             }
             else if (GameManager.Instance.Is_Battle == true)
             {
-                GameManager.Instance.bossManager.BossDamaged(GameManager.Instance.Player.conditions.attackTmp);
+                Attack();
                 //Effect
                 GameManager.Instance.Player.particle.CreateBattleParticle(worldPosition);
                 Debug.Log("데미지발동");
             }
         }
+    }
+
+    void Attack()
+    {
+        int randomValue = Random.Range(1, 101);
+        bool isCritical = randomValue < GameManager.Instance.Player.conditions.statSO.criticalChance;
+
+        float finalDamage;
+
+        if (isCritical)
+        {
+            finalDamage = GameManager.Instance.Player.conditions.attackTmp * GameManager.Instance.Player.conditions.criticalTmp;
+            GameManager.Instance.bossManager.BossDamaged(finalDamage);
+        }
+        else
+        {
+            finalDamage = GameManager.Instance.Player.conditions.attackTmp;
+            GameManager.Instance.bossManager.BossDamaged(finalDamage);
+        }
+       
     }
 }

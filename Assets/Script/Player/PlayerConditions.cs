@@ -23,7 +23,7 @@ public class PlayerConditions : MonoBehaviour
     {
         statSO.hp = 100 + Data.Instance.gameData.hpLV * 100;
         statSO.attack = 5 + Data.Instance.gameData.attackLV * 10;
-        statSO.critical = Data.Instance.gameData.criticalLV * 20;
+        statSO.critical = 1 + Data.Instance.gameData.criticalLV * 0.2f;
         statSO.criticalChance = Data.Instance.gameData.criticalChanceLV;
         Data.Instance.SaveGameData();
     }
