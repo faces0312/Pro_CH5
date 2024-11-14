@@ -75,6 +75,7 @@ public class BossManager : MonoBehaviour
 
     public void GoBackMain()
     {
+        GameManager.Instance.Is_Battle = false;
         SceneManager.LoadScene("MainScene");
     }
 }

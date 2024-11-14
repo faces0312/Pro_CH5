@@ -29,5 +29,8 @@ public class PlayerConditions : MonoBehaviour
     public void PlayerDamaged(float value)
     {
         hpTmp -= value;
+
+        if (hpTmp <= 0)
+            GameManager.Instance.bossManager.GameOver();
     }
 }

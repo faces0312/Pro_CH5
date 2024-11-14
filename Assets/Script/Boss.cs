@@ -7,7 +7,7 @@ public class Boss : MonoBehaviour
     public StatSO statSO;
     float attackSpeed;
 
-    private void Start()
+    private void Awake()
     {
         UpdateStats();
         attackSpeed = statSO.attackSpeed;
@@ -29,7 +29,7 @@ public class Boss : MonoBehaviour
 
     public void UpdateStats()
     {
-        statSO.hp = 300 + (Data.Instance.gameData.stage + 1);
-        statSO.attack = 10 + (Data.Instance.gameData.stage + 1);
+        statSO.hp = 300 * (Data.Instance.gameData.stage + 1);
+        statSO.attack = 10 * (Data.Instance.gameData.stage + 1);
     }
 }

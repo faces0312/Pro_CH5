@@ -11,13 +11,13 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         GameManager.Instance.Player = this;
         controller = GetComponent<PlayerController>();
         conditions = GetComponent<PlayerConditions>();
         subFirends = GetComponent<PlayerSubFirends>();
         particle = GetComponent<ParticleController>();
         conditions.UpdateStats();
-        Time.timeScale = 1;
     }
     private void Start()
     {
